@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Site ismi -->
     <title>JofraBlane</title>
+
+    <!-- Geçici resim koydum bura değiştirilebilir olacak. -->
+    <link rel="shortcut icon" href="https://png.pngtree.com/element_our/20200702/ourmid/pngtree-technology-icon-vector-download-image_2286321.jpg" type="image/x-icon">
 
     <!-- Google Fonts -->
     <!-- Noto Sans -->
@@ -16,11 +21,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
+    <!-- Sitede bulunan bazı ikonlar için gereken kütüphane -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css' integrity='sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==' crossorigin='anonymous'/>
+
+    <!-- Slider CSS -->
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
     
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Üstte bulunan menülerin yapısı -->
     <div class="topBar" style = "--topBar: #212f3d">
         <ul class="left menu">
             <li><a class = "prevent" href=""><i class="fa-solid fa-bars"></i></a></li>
@@ -40,6 +52,7 @@
         </div>
     </div>
 
+    <!-- Sol açılır kapanır menü. -->
     <ul class="leftMenu">
         <li class = "l"><a class = "logo" href="">JOFRABLANE</a> <i class="fa-solid fa-chevron-left"></i></li>
         <li class = "ara">
@@ -55,7 +68,6 @@
         <hr>
         <li><a href=""><i class="fa-solid fa-plus"></i> Yeni Haberler</a></li>
         <li><a href=""><i class="fa-solid fa-chart-simple"></i> En Çok Okunanlar</a></li>
-        <li><a href=""><i class="fa-solid fa-chart-line"></i> En Çok Paylaşılanlar</a></li>
         <hr>
         <li><a href="">Hakkımızda</a></li>
         <li><a href="">Yazarlar</a></li>
@@ -70,6 +82,25 @@
         </li>
     </ul>
 
+    <!-- 1100 px den sonra ekranı kaplamasın diye kaldırdım -->
+    <div class="reklamAlani">
+        <h1>1024x250 Reklam Alanı</h1>
+    </div>
+
+    <!-- Yeni eklenen ilk 4 haber burada görünecek. Responsive olarak tasarlanıp 1400 px den sonra sola doğru sonsuz kaydırma özelliği kullanılabilir. İsteğinize göre artırabilirim ya da azaltabilrim. -->
+    <h3 style = "text-align: center;margin-top: 50px;">Yeni Eklenen Haberler</h3>
+    <div class="owl-carousel owl-theme yeniHaberler">
+        <div class = "news"> Yeni Haber 1 </div>
+        <div class = "news"> Yeni Haber 2 </div>
+        <div class = "news"> Yeni Haber 3 </div>
+        <div class = "news"> Yeni Haber 4 </div>
+    </div>
+
+    <!-- Slider JS -->
+    <script src="jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Custom JS -->
     <script src="scritp.js"></script>
 </body>
 </html>

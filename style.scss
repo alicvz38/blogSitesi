@@ -30,8 +30,6 @@ body{
         justify-content: space-between;
         background: var(--topBar);
         box-shadow:  0 0 25px var(--topBar);
-        position:fixed;
-        top:0;
 
         .logo{
             margin-top: -10px;
@@ -39,7 +37,7 @@ body{
             font-family: "Texturina", sans-serif;
         }
 
-        ul.menu, left{
+        ul.menu, .left{
             text-transform: uppercase;
             height: 60px;
             display: flex;
@@ -121,6 +119,8 @@ body{
     
     .leftMenu{
         position: absolute;
+        top:0;
+        z-index: 100;
         left: -300px;
         padding: 15px;
         width: 300px;
@@ -235,9 +235,40 @@ body{
             }
         }
     }
+
+    .reklamAlani{
+        margin: auto;
+        border: 1px solid #ccc;
+        width: 1024px;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1{
+            font-weight: 300;
+        }
+    }
+
+    .disabled{
+        display:none;
+    }
+
+    div.yeniHaberler{
+        margin: 10px 0;
+        div.news{
+            width: 100%;
+            aspect-ratio: 3/2;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
 }
 
-@media screen and (max-width: 1100px){
+@media all and (max-width: 1100px){
     .mobil{
         width: 0;
         overflow: hidden;
@@ -258,4 +289,10 @@ body{
         height: 50px;
     }
 
+    div.reklamAlani{
+        width: 0;
+        height: 0;
+        border: none;
+        overflow: hidden;
+    }
 }
