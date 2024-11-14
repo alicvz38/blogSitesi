@@ -28,15 +28,13 @@ body .topBar {
   justify-content: space-between;
   background: var(--topBar);
   box-shadow: 0 0 25px var(--topBar);
-  position: fixed;
-  top: 0;
 }
 body .topBar .logo {
   margin-top: -10px;
   font-size: 32px;
   font-family: "Texturina", sans-serif;
 }
-body .topBar ul.menu, body .topBar left {
+body .topBar ul.menu, body .topBar .left {
   text-transform: uppercase;
   height: 60px;
   display: flex;
@@ -44,19 +42,19 @@ body .topBar ul.menu, body .topBar left {
   gap: 25px;
   margin-left: 15px;
 }
-body .topBar ul.menu li, body .topBar left li {
+body .topBar ul.menu li, body .topBar .left li {
   height: 60px;
   display: flex;
   align-items: center;
 }
-body .topBar ul.menu li a, body .topBar left li a {
+body .topBar ul.menu li a, body .topBar .left li a {
   height: 60px;
   display: flex;
   align-items: center;
   border-bottom: 3px solid var(--topBar);
   transition: 100ms;
 }
-body .topBar ul.menu li a.menu.active, body .topBar ul.menu li a.menu:hover, body .topBar left li a.menu.active, body .topBar left li a.menu:hover {
+body .topBar ul.menu li a.menu.active, body .topBar ul.menu li a.menu:hover, body .topBar .left li a.menu.active, body .topBar .left li a.menu:hover {
   border-bottom: 3px solid #fff;
 }
 body .topBar .right {
@@ -106,6 +104,8 @@ body .topBar a i {
 }
 body .leftMenu {
   position: absolute;
+  top: 0;
+  z-index: 100;
   left: -300px;
   padding: 15px;
   width: 300px;
@@ -206,8 +206,34 @@ body .leftMenu .sosyal a {
   border-radius: 50%;
   box-shadow: 0 0 20px #000;
 }
+body .reklamAlani {
+  margin: auto;
+  border: 1px solid #ccc;
+  width: 1024px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .reklamAlani h1 {
+  font-weight: 300;
+}
+body .disabled {
+  display: none;
+}
+body div.yeniHaberler {
+  margin: 10px 0;
+}
+body div.yeniHaberler div.news {
+  width: 100%;
+  aspect-ratio: 3/2;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-@media screen and (max-width: 1100px) {
+@media all and (max-width: 1100px) {
   .mobil {
     width: 0;
     overflow: hidden;
@@ -220,5 +246,11 @@ body .leftMenu .sosyal a {
   }
   .leftMenu li.ara {
     height: 50px;
+  }
+  div.reklamAlani {
+    width: 0;
+    height: 0;
+    border: none;
+    overflow: hidden;
   }
 }/*# sourceMappingURL=style.css.map */
