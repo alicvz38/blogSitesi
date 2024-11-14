@@ -266,6 +266,215 @@ body{
         }
     }
 
+
+    .haberAkisi{
+        width: 1100px;
+        margin: 50px auto;
+        display: flex;
+
+        .left{
+            
+            .haber{
+                width: 800px;
+                padding: 10px;
+                margin-bottom: 25px;
+                display: flex;
+                gap: 10px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px #999;
+                transition: 250ms;
+
+                &:hover{
+                    box-shadow: 0 0 15px #333;
+                    border-radius: 20px;
+                }
+
+                a.resim{
+                    width: 250px;
+                    height: 175px;
+                    display: flex;
+                    border: 1px solid #ccc;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 10px;
+                }
+
+                .icerik{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    width: 750px;
+
+                    .top{
+                        padding: 5px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .kategori, .zaman{
+                            color: #aaa;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                            font-size: 12px;
+                            transition: 250ms;
+                        }
+
+                        .kategori:hover, .zaman:hover{
+                            color: #777;
+                        }
+                    }
+
+                    .center{
+                        padding: 5px;
+                        display: flex;
+
+                        .baslik{
+                            font-size: 18px;
+                            font-weight: bold;
+                            transition: 250ms;
+
+                            &:hover{
+                                color: #212f3d;
+                            }
+                        }
+                    }
+
+                    .bottom{
+                        padding: 5px;
+                        display: flex;
+
+                        .kullanici, .kullanici i{
+                            color: #aaa;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            transition: 250ms;
+                        }
+                        
+                        .kullanici:hover, .kullanici i:hover{
+                            color: #777;
+                        }
+                    }
+                }
+            }
+
+            a.dahaFazla{
+                display: block;
+                margin: auto;
+                border: 1px solid #212f3d;
+                border-radius: 5px;
+                color: #212f3d;
+                width: 250px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 250ms;
+
+                &:hover{
+                    background: #212f3d;
+                    color:#fff;
+                }
+            }
+        }
+
+        .right{
+            margin-left: 15px;
+            width: 300px;
+
+            .reklam{
+                width: 300px;
+                height: 600px;
+                border: 1px solid #ccc;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .enCok{
+                width: 300px;
+                margin-top: 25px;
+
+                .border{
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px #555;
+                    transition: 250ms;
+
+                    &:hover{
+                        box-shadow: 0 0 20px #000;
+                    }
+                }
+
+                .icerik{
+                    width: 300px;
+                    display: flex;
+                    gap: 10px;
+                    margin-bottom: 15px;
+                    transition: 250ms;
+
+                    .resim{
+                        width: 125px;
+                        height: 100px;
+                        border: 1px solid #ccc;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+
+                        p{
+                            text-align: center;
+                        }
+
+                        .sira1, .sira2, .sira3, .sira{
+                            border-top-left-radius: 10px;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 25px;
+                            height: 25px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        .sira1{
+                            background: gold;
+                        }
+
+                        .sira2{
+                            background: silver;
+                        }
+
+                        .sira3{
+                            background: brown;
+                        }
+
+                        .sira{
+                            background: green;
+                        }
+                    }
+
+                    .icerik{
+                        display: flex;
+                        flex-direction: column;
+
+                        .metin{
+                            font-size: 14px;
+                            font-weight: 700;
+                            transition: 250ms;
+
+                            &:hover{
+                                color: #212f3d;
+                            }
+                        }
+
+                        .adet{
+                            font-size: 14px;
+                            color: #bbb;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media all and (max-width: 1100px){
@@ -294,5 +503,13 @@ body{
         height: 0;
         border: none;
         overflow: hidden;
+    }
+
+    .haberAkisi .left{
+        margin-left: 15px;
+    }
+
+    .haberAkisi .right{
+        display: none;
     }
 }

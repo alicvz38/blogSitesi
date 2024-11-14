@@ -232,6 +232,179 @@ body div.yeniHaberler div.news {
   align-items: center;
   justify-content: center;
 }
+body .haberAkisi {
+  width: 1100px;
+  margin: 50px auto;
+  display: flex;
+}
+body .haberAkisi .left .haber {
+  width: 800px;
+  padding: 10px;
+  margin-bottom: 25px;
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #999;
+  transition: 250ms;
+}
+body .haberAkisi .left .haber:hover {
+  box-shadow: 0 0 15px #333;
+  border-radius: 20px;
+}
+body .haberAkisi .left .haber a.resim {
+  width: 250px;
+  height: 175px;
+  display: flex;
+  border: 1px solid #ccc;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+body .haberAkisi .left .haber .icerik {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 750px;
+}
+body .haberAkisi .left .haber .icerik .top {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+body .haberAkisi .left .haber .icerik .top .kategori, body .haberAkisi .left .haber .icerik .top .zaman {
+  color: #aaa;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  transition: 250ms;
+}
+body .haberAkisi .left .haber .icerik .top .kategori:hover, body .haberAkisi .left .haber .icerik .top .zaman:hover {
+  color: #777;
+}
+body .haberAkisi .left .haber .icerik .center {
+  padding: 5px;
+  display: flex;
+}
+body .haberAkisi .left .haber .icerik .center .baslik {
+  font-size: 18px;
+  font-weight: bold;
+  transition: 250ms;
+}
+body .haberAkisi .left .haber .icerik .center .baslik:hover {
+  color: #212f3d;
+}
+body .haberAkisi .left .haber .icerik .bottom {
+  padding: 5px;
+  display: flex;
+}
+body .haberAkisi .left .haber .icerik .bottom .kullanici, body .haberAkisi .left .haber .icerik .bottom .kullanici i {
+  color: #aaa;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 250ms;
+}
+body .haberAkisi .left .haber .icerik .bottom .kullanici:hover, body .haberAkisi .left .haber .icerik .bottom .kullanici i:hover {
+  color: #777;
+}
+body .haberAkisi .left a.dahaFazla {
+  display: block;
+  margin: auto;
+  border: 1px solid #212f3d;
+  border-radius: 5px;
+  color: #212f3d;
+  width: 250px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 250ms;
+}
+body .haberAkisi .left a.dahaFazla:hover {
+  background: #212f3d;
+  color: #fff;
+}
+body .haberAkisi .right {
+  margin-left: 15px;
+  width: 300px;
+}
+body .haberAkisi .right .reklam {
+  width: 300px;
+  height: 600px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .haberAkisi .right .enCok {
+  width: 300px;
+  margin-top: 25px;
+}
+body .haberAkisi .right .enCok .border {
+  border-radius: 10px;
+  box-shadow: 0 0 10px #555;
+  transition: 250ms;
+}
+body .haberAkisi .right .enCok .border:hover {
+  box-shadow: 0 0 20px #000;
+}
+body .haberAkisi .right .enCok .icerik {
+  width: 300px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  transition: 250ms;
+}
+body .haberAkisi .right .enCok .icerik .resim {
+  width: 125px;
+  height: 100px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+body .haberAkisi .right .enCok .icerik .resim p {
+  text-align: center;
+}
+body .haberAkisi .right .enCok .icerik .resim .sira1, body .haberAkisi .right .enCok .icerik .resim .sira2, body .haberAkisi .right .enCok .icerik .resim .sira3, body .haberAkisi .right .enCok .icerik .resim .sira {
+  border-top-left-radius: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .haberAkisi .right .enCok .icerik .resim .sira1 {
+  background: gold;
+}
+body .haberAkisi .right .enCok .icerik .resim .sira2 {
+  background: silver;
+}
+body .haberAkisi .right .enCok .icerik .resim .sira3 {
+  background: brown;
+}
+body .haberAkisi .right .enCok .icerik .resim .sira {
+  background: green;
+}
+body .haberAkisi .right .enCok .icerik .icerik {
+  display: flex;
+  flex-direction: column;
+}
+body .haberAkisi .right .enCok .icerik .icerik .metin {
+  font-size: 14px;
+  font-weight: 700;
+  transition: 250ms;
+}
+body .haberAkisi .right .enCok .icerik .icerik .metin:hover {
+  color: #212f3d;
+}
+body .haberAkisi .right .enCok .icerik .icerik .adet {
+  font-size: 14px;
+  color: #bbb;
+}
 
 @media all and (max-width: 1100px) {
   .mobil {
@@ -252,5 +425,11 @@ body div.yeniHaberler div.news {
     height: 0;
     border: none;
     overflow: hidden;
+  }
+  .haberAkisi .left {
+    margin-left: 15px;
+  }
+  .haberAkisi .right {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
