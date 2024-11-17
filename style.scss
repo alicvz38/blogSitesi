@@ -1,0 +1,695 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Nunito";
+    border: none;
+    outline: none;
+}
+
+:root {
+    --bg: linear-gradient(to right, #5499c7, #62bcf8)
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.topBar {
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: var(--bg);
+    box-shadow: 0 0 10px #5499c7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+
+        .menu {
+            display: flex;
+
+            li {
+                height: 50px;
+
+                &.active,
+                &:hover .menu {
+                    border-bottom: 3px solid #fff;
+                }
+
+                a {
+                    display: block;
+                    height: 50px;
+                    padding: 15px;
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: 14px;
+
+                    &.bar {
+                        font-size: 24px;
+                        margin-top: -6px;
+                    }
+
+                    &.logo {
+                        font-size: 24px;
+                        margin-top: -6px;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom {
+        width: 30%;
+
+        input {
+            width: 80%;
+            height: 40px;
+            font-size: 14px;
+            font-weight: 300;
+            background: transparent;
+            color: #fff;
+            padding-left: 25px;
+            border: none;
+            border-bottom: 2px solid #fff;
+        }
+
+        button {
+            padding: 10px;
+            background: transparent;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+
+    .right {
+        padding-right: 15px;
+
+        a {
+            color: #fff;
+            font-weight: 700;
+        }
+    }
+}
+
+.reklamAlani {
+    width: 1024px;
+    height: 250px;
+    box-shadow: 0 0 25px #ccc;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sideBar {
+    width: 320px;
+    min-height: 100vh;
+    position: absolute;
+    overflow-y: scroll;
+    position: fixed;
+    bottom:0;
+    top: 0;
+    left: -320px;
+    z-index: 5;
+    background: #ffffffAA;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 25px #5499c750;
+    padding: 20px;
+    transition: 100ms;
+
+    a {
+        color: #000000AA;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &.logo {
+            margin-left: 15px;
+            flex-direction: row;
+            justify-content: space-between;
+
+            a.logo {
+                font-size: 20px;
+                margin-top: -5px;
+            }
+
+            i {
+                cursor: pointer;
+            }
+        }
+
+        li {
+            width: 275px;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+
+            &:hover,
+            &.active {
+                background: #5499c720;
+
+                i {
+                    color: #5499c7;
+                }
+            }
+        }
+    }
+
+    ul.sosyal {
+        flex-direction: row;
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 0 0 10px #5499c7;
+
+            &:hover {
+                background: transparent;
+            }
+        }
+    }
+}
+
+
+.slideerHaber {
+    width: 100%;
+    margin-top: 50px;
+
+    .item {
+        width: 102%;
+        transition: 250ms;
+
+        a {
+            position: relative;
+
+            .bg {
+                position: absolute;
+                z-index: 3;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to top, #000000FF, #00000000);
+                transition: 250ms;
+                color: #fff;
+
+                .konum {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    position: absolute;
+                    bottom: 25px;
+                    left: 25px;
+
+                    .kategori {
+                        background: rgb(189, 140, 6);
+                        width: 75px;
+                        font-weight: 700;
+                        border-radius: 3px;
+                        padding: 3px;
+                        text-align: center;
+                        color: #fff;
+                        font-size: 12px;
+                    }
+
+                    .haber {
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+
+                    .paylasanTarih {
+                        display: flex;
+                        gap: 50px;
+                        font-size: 16px;
+                        color: #aaa;
+                        font-weight: 600;
+                    }
+                }
+
+                &:hover {
+                    background: linear-gradient(to top, #000000FF, #00000055);
+                }
+            }
+
+            img {
+                z-index: 2;
+            }
+        }
+    }
+}
+
+.haberler {
+    width: 75%;
+    margin: 25px auto;
+    display: flex;
+
+    .yeni {
+        width: 75%;
+        padding: 10px;
+
+        .btn {
+            display: block;
+            width: 250px;
+            padding: 15px;
+            margin: auto;
+            text-align: center;
+            color: #5499c7;
+            border: 1px solid #5499c7;
+            border-radius: 5px;
+            transition: 250ms;
+
+            &:hover {
+                background: #5499c7;
+                color: #fff;
+                box-shadow: 0 0 25px #5499c7;
+            }
+        }
+
+        h2 {
+            margin-bottom: 25px;
+        }
+
+        .yeniHaber {
+            margin-bottom: 25px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #5499c750;
+            padding: 10px;
+            display: flex;
+
+            &:hover {
+                box-shadow: 0 0 10px #5499c7ff;
+            }
+
+            img {
+                border-radius: 10px;
+            }
+
+            .icerikler {
+                width: 100%;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+
+                .kategoriZaman {
+                    display: flex;
+                    justify-content: space-between;
+                    color: #888;
+                    font-weight: 1000;
+
+                    &:hover {
+                        color: #666;
+                    }
+                }
+
+                .haber {
+                    text-align: justify;
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: #000;
+
+                    &:hover {
+                        color: #5499c7;
+                    }
+
+                }
+
+                .yazar {
+                    font-size: 16px;
+                    color: #aaa;
+                    font-weight: 800;
+
+                    &:hover {
+                        color: #888;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .enCokHaber {
+        width: 25%;
+        padding: 10px;
+
+        .reklamAlani2 {
+            width: 250px;
+            height: 400px;
+            margin: 25px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 25px #5499c750;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .enCk {
+            width: 100%;
+            padding: 5px;
+            display: flex;
+            gap: 10px;
+
+            .bilgi {
+                color: #000;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                .haber {
+                    font-weight: 700;
+
+                    &:hover {
+                        color: #5499c7;
+                    }
+                }
+
+                .adet {
+                    color: #aaa;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, Sans-serif;
+    background-color: #0d1117;
+}
+
+.footer {
+    width: 100%;
+    position: relative;
+    height: auto;
+    background: linear-gradient(to right, #0d1117, #5499c7);
+    color: #ffff;
+    padding: 75px 15px;
+    margin-top: 50px;
+    transform: skewY(-5deg);
+    border-radius: 25px;
+    box-shadow: 0 0 50px #5499c7;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .footer-container{
+        transform: skewY(5deg);
+    }
+
+    .footer-col {
+        width: 190px;
+        height: auto;
+        float: left;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        padding: 0px 20px 20px 20px;
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            font-family: inherit;
+            font-size: 12px;
+            line-height: 17px;
+            padding: 20px 0px 5px 0px;
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.250em;
+        }
+
+        h3{
+            font-size: 24px;
+            margin-bottom: 10px;
+            width: 200px;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                font-size: 14px;
+                font-family: inherit;
+                font-weight: bold;
+                padding: 5px 0px 5px 0px;
+                cursor: pointer;
+                transition: .2s;
+                -webkit-transition: .2s;
+                -moz-transition: .2s;
+
+                &:hover {
+                    transition: .1s;
+                    -webkit-transition: .1s;
+                    -moz-transition: .1s;
+                }
+            }
+        }
+
+        i,
+        .social-icons {
+            font-size: 35px;
+        }
+    }
+
+    .social{
+
+        ul{
+
+            li{
+                display: inline-block;
+                padding-right: 5px !important;
+            }
+        }
+    }
+
+    .footer-bottom {
+        padding: 15px 20px;
+        text-align: center;
+        font-size: 14px;
+        border-top: 1px solid #ddd;
+        transform: skewY(5deg);
+
+        .footer-bottom-links {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+            display: inline-flex;
+            gap: 15px;
+        }
+    }
+}
+.clearfix {
+    clear: both;
+}
+
+
+@media only screen and (min-width: 1280px) {
+    .footer-container {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 1139px) {
+    .footer-container .social {
+        width: 1000px;
+        display: block;
+    }
+
+    .social h1 {
+        margin: 0px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .footer .footer-col {
+        width: 33%;
+    }
+
+    .footer .footer-col h1 {
+        font-size: 14px;
+    }
+
+    .footer .footer-col ul li {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .footer .footer-col {
+        width: 50%;
+    }
+
+    .footer .footer-col h1 {
+        font-size: 14px;
+    }
+
+    .footer .footer-col ul li {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .footer .footer-col {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 1280px) {
+
+    .topBar {
+        position: fixed;
+        z-index: 4;
+        top: 0;
+        left: 0;
+
+        .left {
+
+            ul.menu {
+                li {
+
+                    a.logo {
+                        margin: -3px;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        .right {
+            font-size: 14px;
+        }
+    }
+
+    .disabled {
+        display: none;
+    }
+
+    .topBar .left .menu .a {
+        display: none;
+    }
+
+    .haberler {
+        width: 95%;
+
+        .yeni {
+            width: 100%;
+
+            .yeniHaber {
+                width: 100%;
+
+                img {
+                    width: 200px;
+                    height: 200px;
+                    aspect-ratio: 1/1;
+                }
+
+                .icerikler {
+
+                    .haber {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 600px) {
+
+    .topBar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        gap: 0;
+    }
+
+    .haberler {
+
+        .yeni {
+            padding: 0;
+
+            .yeniHaber {
+                flex-direction: column;
+                height: auto;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 10px;
+                }
+
+                .icerikler {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    background: linear-gradient(to top, #000, #00000050);
+
+                    .hizala {
+                        padding: 10px;
+                        position: absolute;
+                        bottom: 0;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        font-size: 16px;
+                        border-radius: 10px;
+
+                        .kategoriZaman {
+                            .kategori {
+                                background: rgb(167, 144, 18);
+                                color: #fff;
+                                padding: 5px;
+                                border-radius: 5px;
+                            }
+                        }
+
+                        .haber {
+                            color: #fff;
+                            font-weight: 700;
+                            border-radius: 10px;
+
+                            &:hover {
+                                color: #5499c7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

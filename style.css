@@ -1,0 +1,562 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Nunito";
+  border: none;
+  outline: none;
+}
+
+:root {
+  --bg: linear-gradient(to right, #5499c7, #62bcf8) ;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.topBar {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: var(--bg);
+  box-shadow: 0 0 10px #5499c7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.topBar .left .menu {
+  display: flex;
+}
+.topBar .left .menu li {
+  height: 50px;
+}
+.topBar .left .menu li.active, .topBar .left .menu li:hover .menu {
+  border-bottom: 3px solid #fff;
+}
+.topBar .left .menu li a {
+  display: block;
+  height: 50px;
+  padding: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+}
+.topBar .left .menu li a.bar {
+  font-size: 24px;
+  margin-top: -6px;
+}
+.topBar .left .menu li a.logo {
+  font-size: 24px;
+  margin-top: -6px;
+}
+.topBar .bottom {
+  width: 30%;
+}
+.topBar .bottom input {
+  width: 80%;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 300;
+  background: transparent;
+  color: #fff;
+  padding-left: 25px;
+  border: none;
+  border-bottom: 2px solid #fff;
+}
+.topBar .bottom button {
+  padding: 10px;
+  background: transparent;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.topBar .right {
+  padding-right: 15px;
+}
+.topBar .right a {
+  color: #fff;
+  font-weight: 700;
+}
+
+.reklamAlani {
+  width: 1024px;
+  height: 250px;
+  box-shadow: 0 0 25px #ccc;
+  border-radius: 10px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sideBar {
+  width: 320px;
+  min-height: 100vh;
+  position: absolute;
+  overflow-y: scroll;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: -320px;
+  z-index: 5;
+  background: rgba(255, 255, 255, 0.6666666667);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(84, 153, 199, 0.3137254902);
+  padding: 20px;
+  transition: 100ms;
+}
+.sideBar a {
+  color: rgba(0, 0, 0, 0.6666666667);
+}
+.sideBar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sideBar ul.logo {
+  margin-left: 15px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.sideBar ul.logo a.logo {
+  font-size: 20px;
+  margin-top: -5px;
+}
+.sideBar ul.logo i {
+  cursor: pointer;
+}
+.sideBar ul li {
+  width: 275px;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.sideBar ul li:hover, .sideBar ul li.active {
+  background: rgba(84, 153, 199, 0.1254901961);
+}
+.sideBar ul li:hover i, .sideBar ul li.active i {
+  color: #5499c7;
+}
+.sideBar ul.sosyal {
+  flex-direction: row;
+}
+.sideBar ul.sosyal li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 0 10px #5499c7;
+}
+.sideBar ul.sosyal li:hover {
+  background: transparent;
+}
+
+.slideerHaber {
+  width: 100%;
+  margin-top: 50px;
+}
+.slideerHaber .item {
+  width: 102%;
+  transition: 250ms;
+}
+.slideerHaber .item a {
+  position: relative;
+}
+.slideerHaber .item a .bg {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+  transition: 250ms;
+  color: #fff;
+}
+.slideerHaber .item a .bg .konum {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+}
+.slideerHaber .item a .bg .konum .kategori {
+  background: rgb(189, 140, 6);
+  width: 75px;
+  font-weight: 700;
+  border-radius: 3px;
+  padding: 3px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+}
+.slideerHaber .item a .bg .konum .haber {
+  font-size: 20px;
+  font-weight: 700;
+}
+.slideerHaber .item a .bg .konum .paylasanTarih {
+  display: flex;
+  gap: 50px;
+  font-size: 16px;
+  color: #aaa;
+  font-weight: 600;
+}
+.slideerHaber .item a .bg:hover {
+  background: linear-gradient(to top, black, rgba(0, 0, 0, 0.3333333333));
+}
+.slideerHaber .item a img {
+  z-index: 2;
+}
+
+.haberler {
+  width: 75%;
+  margin: 25px auto;
+  display: flex;
+}
+.haberler .yeni {
+  width: 75%;
+  padding: 10px;
+}
+.haberler .yeni .btn {
+  display: block;
+  width: 250px;
+  padding: 15px;
+  margin: auto;
+  text-align: center;
+  color: #5499c7;
+  border: 1px solid #5499c7;
+  border-radius: 5px;
+  transition: 250ms;
+}
+.haberler .yeni .btn:hover {
+  background: #5499c7;
+  color: #fff;
+  box-shadow: 0 0 25px #5499c7;
+}
+.haberler .yeni h2 {
+  margin-bottom: 25px;
+}
+.haberler .yeni .yeniHaber {
+  margin-bottom: 25px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(84, 153, 199, 0.3137254902);
+  padding: 10px;
+  display: flex;
+}
+.haberler .yeni .yeniHaber:hover {
+  box-shadow: 0 0 10px #5499c7;
+}
+.haberler .yeni .yeniHaber img {
+  border-radius: 10px;
+}
+.haberler .yeni .yeniHaber .icerikler {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.haberler .yeni .yeniHaber .icerikler .kategoriZaman {
+  display: flex;
+  justify-content: space-between;
+  color: #888;
+  font-weight: 1000;
+}
+.haberler .yeni .yeniHaber .icerikler .kategoriZaman:hover {
+  color: #666;
+}
+.haberler .yeni .yeniHaber .icerikler .haber {
+  text-align: justify;
+  font-weight: 600;
+  font-size: 20px;
+  color: #000;
+}
+.haberler .yeni .yeniHaber .icerikler .haber:hover {
+  color: #5499c7;
+}
+.haberler .yeni .yeniHaber .icerikler .yazar {
+  font-size: 16px;
+  color: #aaa;
+  font-weight: 800;
+}
+.haberler .yeni .yeniHaber .icerikler .yazar:hover {
+  color: #888;
+}
+.haberler .enCokHaber {
+  width: 25%;
+  padding: 10px;
+}
+.haberler .enCokHaber .reklamAlani2 {
+  width: 250px;
+  height: 400px;
+  margin: 25px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(84, 153, 199, 0.3137254902);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.haberler .enCokHaber .enCk {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  gap: 10px;
+}
+.haberler .enCokHaber .enCk .bilgi {
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.haberler .enCokHaber .enCk .bilgi .haber {
+  font-weight: 700;
+}
+.haberler .enCokHaber .enCk .bilgi .haber:hover {
+  color: #5499c7;
+}
+.haberler .enCokHaber .enCk .bilgi .adet {
+  color: #aaa;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, Sans-serif;
+  background-color: #0d1117;
+}
+
+.footer {
+  width: 100%;
+  position: relative;
+  height: auto;
+  background: linear-gradient(to right, #0d1117, #5499c7);
+  color: white;
+  padding: 75px 15px;
+  margin-top: 50px;
+  transform: skewY(-5deg);
+  border-radius: 25px;
+  box-shadow: 0 0 50px #5499c7;
+}
+.footer a {
+  text-decoration: none;
+  color: inherit;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer .footer-container {
+  transform: skewY(5deg);
+}
+.footer .footer-col {
+  width: 190px;
+  height: auto;
+  float: left;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0px 20px 20px 20px;
+}
+.footer .footer-col h1 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 17px;
+  padding: 20px 0px 5px 0px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+.footer .footer-col h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  width: 200px;
+}
+.footer .footer-col ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footer .footer-col ul li {
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 5px 0px 5px 0px;
+  cursor: pointer;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+}
+.footer .footer-col ul li:hover {
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+}
+.footer .footer-col i,
+.footer .footer-col .social-icons {
+  font-size: 35px;
+}
+.footer .social ul li {
+  display: inline-block;
+  padding-right: 5px !important;
+}
+.footer .footer-bottom {
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+  transform: skewY(5deg);
+}
+.footer .footer-bottom .footer-bottom-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: inline-flex;
+  gap: 15px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+@media only screen and (min-width: 1280px) {
+  .footer-container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 1139px) {
+  .footer-container .social {
+    width: 1000px;
+    display: block;
+  }
+  .social h1 {
+    margin: 0px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .footer .footer-col {
+    width: 33%;
+  }
+  .footer .footer-col h1 {
+    font-size: 14px;
+  }
+  .footer .footer-col ul li {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .footer .footer-col {
+    width: 50%;
+  }
+  .footer .footer-col h1 {
+    font-size: 14px;
+  }
+  .footer .footer-col ul li {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .footer .footer-col {
+    width: 100%;
+  }
+}
+@media all and (max-width: 1280px) {
+  .topBar {
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+  }
+  .topBar .left ul.menu li a.logo {
+    margin: -3px;
+    font-size: 18px;
+  }
+  .topBar .right {
+    font-size: 14px;
+  }
+  .disabled {
+    display: none;
+  }
+  .topBar .left .menu .a {
+    display: none;
+  }
+  .haberler {
+    width: 95%;
+  }
+  .haberler .yeni {
+    width: 100%;
+  }
+  .haberler .yeni .yeniHaber {
+    width: 100%;
+  }
+  .haberler .yeni .yeniHaber img {
+    width: 200px;
+    height: 200px;
+    aspect-ratio: 1/1;
+  }
+  .haberler .yeni .yeniHaber .icerikler .haber {
+    font-size: 16px;
+  }
+}
+@media all and (max-width: 600px) {
+  .topBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    gap: 0;
+  }
+  .haberler .yeni {
+    padding: 0;
+  }
+  .haberler .yeni .yeniHaber {
+    flex-direction: column;
+    height: auto;
+    position: relative;
+  }
+  .haberler .yeni .yeniHaber img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .haberler .yeni .yeniHaber .icerikler {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.3137254902));
+  }
+  .haberler .yeni .yeniHaber .icerikler .hizala {
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  .haberler .yeni .yeniHaber .icerikler .hizala .kategoriZaman .kategori {
+    background: rgb(167, 144, 18);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .haberler .yeni .yeniHaber .icerikler .hizala .haber {
+    color: #fff;
+    font-weight: 700;
+    border-radius: 10px;
+  }
+  .haberler .yeni .yeniHaber .icerikler .hizala .haber:hover {
+    color: #5499c7;
+  }
+}/*# sourceMappingURL=style.css.map */
