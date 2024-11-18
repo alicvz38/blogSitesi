@@ -265,6 +265,11 @@ body {
   flex-direction: column;
   gap: 40px;
 }
+.haberler .yeni .yeniHaber .icerikler .hizala {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .haberler .yeni .yeniHaber .icerikler .kategoriZaman {
   display: flex;
   justify-content: space-between;
@@ -276,7 +281,7 @@ body {
 }
 .haberler .yeni .yeniHaber .icerikler .haber {
   text-align: justify;
-  font-weight: 600;
+  font-weight: 800;
   font-size: 20px;
   color: #000;
 }

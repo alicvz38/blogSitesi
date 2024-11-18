@@ -19,6 +19,10 @@ $('.slideerHaber').owlCarousel({
     loop:true,
     margin:20,
     dots:false,
+    slideTransition: "linear",
+    autoplay: true,
+    autoplayTimeout: 5000,
+    smartSpeed:5000,
     responsive:{
         0:{
             items:1

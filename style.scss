@@ -306,6 +306,12 @@ body {
                 flex-direction: column;
                 gap: 40px;
 
+                .hizala{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
                 .kategoriZaman {
                     display: flex;
                     justify-content: space-between;
@@ -319,7 +325,7 @@ body {
 
                 .haber {
                     text-align: justify;
-                    font-weight: 600;
+                    font-weight: 800;
                     font-size: 20px;
                     color: #000;
 
