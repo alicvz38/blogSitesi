@@ -37,9 +37,37 @@ body {
 }
 .topBar .left .menu li {
   height: 50px;
+  position: relative;
 }
 .topBar .left .menu li.active, .topBar .left .menu li:hover .menu {
   border-bottom: 3px solid #fff;
+}
+.topBar .left .menu li.ktgr:hover ul {
+  top: 50px;
+  visibility: visible;
+  opacity: 1;
+}
+.topBar .left .menu li ul {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  min-width: 150px;
+  height: auto;
+  background: #5499c7;
+  box-shadow: 0 0 10px #2682c0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 250ms;
+}
+.topBar .left .menu li ul li {
+  height: auto;
+  padding: 10px;
+}
+.topBar .left .menu li ul li:hover {
+  background: #6bb4e4;
+}
+.topBar .left .menu li ul li a {
+  font-size: 16px;
 }
 .topBar .left .menu li a {
   display: block;
@@ -132,20 +160,34 @@ body {
   font-size: 20px;
   margin-top: -5px;
 }
-.sideBar ul.logo i {
-  cursor: pointer;
-}
 .sideBar ul li {
   width: 275px;
   padding: 15px;
   cursor: pointer;
   border-radius: 10px;
+  transition: 250ms;
+}
+.sideBar ul li a {
+  display: block;
+  width: 100%;
+}
+.sideBar ul li i {
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 250ms;
 }
 .sideBar ul li:hover, .sideBar ul li.active {
   background: rgba(84, 153, 199, 0.1254901961);
 }
-.sideBar ul li:hover i, .sideBar ul li.active i {
+.sideBar ul li:hover i.i, .sideBar ul li.active i.i {
   color: #5499c7;
+  margin-right: 20px;
+}
+.sideBar ul.altKat, .sideBar ul.altArsiv {
+  display: none;
+}
+.sideBar ul.altKat li, .sideBar ul.altArsiv li {
+  padding-left: 25px;
 }
 .sideBar ul.sosyal {
   flex-direction: row;

@@ -39,10 +39,49 @@ body {
 
             li {
                 height: 50px;
+                position: relative;
 
                 &.active,
                 &:hover .menu {
                     border-bottom: 3px solid #fff;
+                }
+
+                &.ktgr{
+
+                    &:hover{
+
+                        ul{
+                            top: 50px;
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                ul{
+                    position: absolute;
+                    left: 0;
+                    top: 100px;
+                    min-width: 150px;
+                    height: auto;
+                    background: #5499c7;
+                    box-shadow: 0 0 10px #2682c0;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: 250ms;
+
+                    li{
+                        height: auto;
+                        padding: 10px;
+                        
+                        &:hover{
+                            background: #6bb4e4;
+                        }
+
+                        a{
+                            font-size: 16px;
+                        }
+                    }
                 }
 
                 a {
@@ -148,9 +187,6 @@ body {
                 margin-top: -5px;
             }
 
-            i {
-                cursor: pointer;
-            }
         }
 
         li {
@@ -158,15 +194,36 @@ body {
             padding: 15px;
             cursor: pointer;
             border-radius: 10px;
+            transition: 250ms;
+
+            a{
+                display: block;
+                width: 100%;
+            }
+
+            i {
+                margin-right: 10px;
+                cursor: pointer;
+                transition: 250ms;
+            }
 
             &:hover,
             &.active {
                 background: #5499c720;
 
-                i {
+                i.i {
                     color: #5499c7;
+                    margin-right: 20px;
                 }
             }
+        }
+    }
+
+    ul.altKat, ul.altArsiv{
+        display: none;
+        
+        li{
+            padding-left: 25px;
         }
     }
 

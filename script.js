@@ -14,6 +14,9 @@ kapat.addEventListener("click",(e)=>{
 document.querySelector(".kategori").addEventListener("click", (e) => {
     e.preventDefault();
 });
+document.querySelector(".kategoriler").addEventListener("click", (e) => {
+    e.preventDefault();
+});
 
 $('.slideerHaber').owlCarousel({
     loop:true,
@@ -36,29 +39,67 @@ $('.slideerHaber').owlCarousel({
     }
 });
 
+
+let kt = document.querySelector(".kt");
+let ktgr = document.querySelector(".altKat");
+let durum = 0;
+
+let arsiv = document.querySelector(".arsiv");
+let altArsiv = document.querySelector(".altArsiv");
+let durum2 = 0;
+
+kt.addEventListener("click",()=>{
+    if(durum == 0){
+        ktgr.style.display = "block";
+        altArsiv.style.display = "none";
+        durum = 1;
+        durum2 = 0;
+    }else{
+        ktgr.style.display = "none";
+        durum = 0;
+    }
+});
+
+arsiv.addEventListener("click",(e)=>{
+    if(durum2 == 0){
+        altArsiv.style.display = "block";
+        ktgr.style.display = "none";
+        durum2 = 1;
+        durum = 0;
+    }else{
+        altArsiv.style.display = "none";
+        durum2 = 0;
+    }
+
+    e.preventDefault();
+});
+
 let azalt = document.querySelector(".azalt");
 let artir = document.querySelector(".artir");
 let icerik = document.querySelectorAll(".icerik");
 let fontsize = "20";
 
-
-azalt.addEventListener("click",(e)=>{
-    if(fontsize > 16){
-        fontsize--;
-    }
-    pixel = fontsize+"px"
-    for(let i = 0; i < icerik.length; i++){
-        icerik[i].style.fontSize = pixel;
-    }
-    e.preventDefault();
-});
-artir.addEventListener("click",(e)=>{
-    if(fontsize <= 28){
-        fontsize++;
-    }
-    pixel = fontsize+"px"
-    for(let i = 0; i < icerik.length; i++){
-        icerik[i].style.fontSize = pixel;
-    }
-    e.preventDefault();
-});
+if(azalt != null){
+    azalt.addEventListener("click",(e)=>{
+        if(fontsize > 16){
+            fontsize--;
+        }
+        pixel = fontsize+"px"
+        for(let i = 0; i < icerik.length; i++){
+            icerik[i].style.fontSize = pixel;
+        }
+        e.preventDefault();
+    });
+}
+if(artir != null){
+    artir.addEventListener("click",(e)=>{
+        if(fontsize <= 28){
+            fontsize++;
+        }
+        pixel = fontsize+"px"
+        for(let i = 0; i < icerik.length; i++){
+            icerik[i].style.fontSize = pixel;
+        }
+        e.preventDefault();
+    });
+}
