@@ -35,3 +35,30 @@ $('.slideerHaber').owlCarousel({
         }
     }
 });
+
+let azalt = document.querySelector(".azalt");
+let artir = document.querySelector(".artir");
+let icerik = document.querySelectorAll(".icerik");
+let fontsize = "20";
+
+
+azalt.addEventListener("click",(e)=>{
+    if(fontsize > 16){
+        fontsize--;
+    }
+    pixel = fontsize+"px"
+    for(let i = 0; i < icerik.length; i++){
+        icerik[i].style.fontSize = pixel;
+    }
+    e.preventDefault();
+});
+artir.addEventListener("click",(e)=>{
+    if(fontsize <= 28){
+        fontsize++;
+    }
+    pixel = fontsize+"px"
+    for(let i = 0; i < icerik.length; i++){
+        icerik[i].style.fontSize = pixel;
+    }
+    e.preventDefault();
+});

@@ -221,6 +221,12 @@ body {
   margin: 25px auto;
   display: flex;
 }
+.haberler h3,
+.haberler h2 {
+  color: #5499c7;
+  font-weight: 1000;
+  margin: 25px 0;
+}
 .haberler .yeni {
   width: 75%;
   padding: 10px;
@@ -295,6 +301,100 @@ body {
 }
 .haberler .yeni .yeniHaber .icerikler .yazar:hover {
   color: #888;
+}
+.haberler .makale .font {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.haberler .makale .font .yaziAyarla {
+  font-size: 24px;
+  color: #555;
+  font-weight: 500;
+  display: flex;
+  gap: 15px;
+}
+.haberler .makale .font .yaziAyarla div {
+  cursor: pointer;
+}
+.haberler .makale .font .yaziAyarla sup {
+  font-size: 24px;
+}
+.haberler .makale .yazarveTarih {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 10px;
+  color: #bbb;
+}
+.haberler .makale .yazarveTarih .yazar {
+  cursor: pointer;
+  color: #aaa;
+  font-weight: 800;
+  transition: 250ms;
+}
+.haberler .makale .yazarveTarih .yazar:hover {
+  color: #888;
+}
+.haberler .makale img {
+  width: 90%;
+  margin: 25px auto;
+}
+.haberler .makale .icerik {
+  font-size: 20px;
+  text-align: justify;
+  width: 90%;
+  margin: 50px 0;
+}
+.haberler .makale table {
+  overflow: auto;
+  width: 90%;
+  margin-bottom: 100px;
+}
+.haberler .makale table table {
+  border: 1px solid #dededf;
+  height: 100%;
+  width: 90%;
+  table-layout: auto;
+  border-collapse: collapse;
+  border-spacing: 1px;
+  text-align: left;
+}
+.haberler .makale table captiontable {
+  caption-side: top;
+  text-align: left;
+}
+.haberler .makale table th {
+  border: 1px solid #dededf;
+  background-color: #2682c0;
+  color: #fff;
+  padding: 5px;
+}
+.haberler .makale table td {
+  border: 1px solid #dededf;
+  padding: 5px;
+}
+.haberler .makale table tr:nth-child(even) td {
+  background-color: #dceaf9;
+  color: #000000;
+}
+.haberler .makale table tr:nth-child(odd) td {
+  background-color: #d5c7e1;
+  color: #000000;
+}
+.haberler .makale ol li {
+  list-style: decimal;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.haberler .makale .kaynak {
+  background: rgba(84, 153, 199, 0.3137254902);
+  padding: 5px;
+  font-size: 18px;
+  color: #222;
+}
+.haberler .makale .kaynak a {
+  margin-left: 25px;
+  color: #555;
 }
 .haberler .enCokHaber {
   width: 25%;
@@ -510,6 +610,10 @@ footer {
   }
   .haberler .yeni .yeniHaber .icerikler .haber {
     font-size: 16px;
+  }
+  .haberler .makale img, .haberler .makale table, .haberler .makale .icerik {
+    width: 95%;
+    margin: auto;
   }
 }
 @media all and (max-width: 600px) {

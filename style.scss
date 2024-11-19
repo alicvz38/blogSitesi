@@ -119,7 +119,7 @@ body {
     position: absolute;
     overflow-y: scroll;
     position: fixed;
-    bottom:0;
+    bottom: 0;
     top: 0;
     left: -320px;
     z-index: 5;
@@ -257,6 +257,13 @@ body {
     margin: 25px auto;
     display: flex;
 
+    h3,
+    h2 {
+        color: #5499c7;
+        font-weight: 1000;
+        margin: 25px 0;
+    }
+
     .yeni {
         width: 75%;
         padding: 10px;
@@ -306,7 +313,7 @@ body {
                 flex-direction: column;
                 gap: 40px;
 
-                .hizala{
+                .hizala {
                     display: flex;
                     flex-direction: column;
                     gap: 20px;
@@ -345,6 +352,125 @@ body {
                     }
 
                 }
+            }
+        }
+    }
+
+    .makale {
+
+        .font {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+
+            .yaziAyarla {
+                font-size: 24px;
+                color: #555;
+                font-weight: 500;
+                display: flex;
+                gap: 15px;
+
+                div {
+                    cursor: pointer;
+                }
+
+                sup {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .yazarveTarih {
+            display: flex;
+            gap: 50px;
+            margin-bottom: 10px;
+            color: #bbb;
+
+            .yazar {
+                cursor: pointer;
+                color: #aaa;
+                font-weight: 800;
+                transition: 250ms;
+
+                &:hover {
+                    color: #888;
+                }
+            }
+        }
+
+        img {
+            width: 90%;
+            margin: 25px auto;
+        }
+
+        .icerik {
+            font-size: 20px;
+            text-align: justify;
+            width: 90%;
+            margin: 50px 0;
+        }
+
+        table {
+            overflow: auto;
+            width: 90%;
+            margin-bottom: 100px;
+        }
+        
+        table table {
+            border: 1px solid #dededf;
+            height: 100%;
+            width: 90%;
+            table-layout: auto;
+            border-collapse: collapse;
+            border-spacing: 1px;
+            text-align: left;
+        }
+        
+        table captiontable{
+            caption-side: top;
+            text-align: left;
+        }
+        
+        table th {
+            border: 1px solid #dededf;
+            background-color: #2682c0;
+            color: #fff;
+            padding: 5px;
+        }
+        
+        table td {
+            border: 1px solid #dededf;
+            padding: 5px;
+        }
+        
+        table tr:nth-child(even) td {
+            background-color: #dceaf9;
+            color: #000000;
+        }
+        
+        table tr:nth-child(odd) td {
+            background-color: #d5c7e1;
+            color: #000000;
+        }
+
+        ol{
+
+            li{
+                list-style: decimal;
+                margin-bottom: 10px;
+                font-weight: 600;
+            }
+        }
+
+        .kaynak{
+            background: #5499c750;
+            padding: 5px;
+            font-size: 18px;
+            color: #222;
+
+            a{
+                margin-left: 25px;
+                color: #555;
             }
         }
     }
@@ -420,7 +546,7 @@ footer {
         }
     }
 
-    .footer-container{
+    .footer-container {
         transform: skewY(5deg);
     }
 
@@ -445,11 +571,11 @@ footer {
             letter-spacing: 0.250em;
         }
 
-        h3{
+        h3 {
             font-size: 24px;
             margin-bottom: 10px;
         }
-        
+
         ul {
             list-style-type: none;
             margin: 0;
@@ -479,11 +605,11 @@ footer {
         }
     }
 
-    .social{
+    .social {
 
-        ul{
+        ul {
 
-            li{
+            li {
                 display: inline-block;
                 padding-right: 5px !important;
             }
@@ -506,6 +632,7 @@ footer {
         }
     }
 }
+
 .clearfix {
     clear: both;
 }
@@ -629,16 +756,23 @@ footer {
                 }
             }
         }
+
+        .makale{
+            img, table, .icerik{
+                width: 95%;
+                margin: auto;
+            }
+        }
     }
 }
 
 @media all and (max-width: 600px) {
 
-    body{
+    body {
         width: 100%;
     }
 
-    .topBar{
+    .topBar {
         position: fixed;
         top: 0;
         left: 0;
