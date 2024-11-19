@@ -582,7 +582,7 @@ footer {
     left: 0;
   }
   .topBar .left ul.menu li a.logo {
-    margin: -3px;
+    margin-top: -14px;
     font-size: 18px;
   }
   .topBar .right {
@@ -628,6 +628,7 @@ footer {
   }
   .haberler .yeni {
     padding: 0;
+    margin-top: 25px;
   }
   .haberler .yeni .yeniHaber {
     flex-direction: column;
