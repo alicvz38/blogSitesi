@@ -626,6 +626,9 @@ footer {
     left: 0;
     width: 100%;
   }
+  .topBar .left .logo {
+    margin-left: -15px;
+  }
   .haberler .yeni {
     padding: 0;
     margin-top: 25px;

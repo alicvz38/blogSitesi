@@ -777,6 +777,13 @@ footer {
         top: 0;
         left: 0;
         width: 100%;
+
+        .left{
+
+            .logo{
+                margin-left: -15px;
+            }
+        }
     }
 
     .haberler {
