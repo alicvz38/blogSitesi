@@ -184,7 +184,9 @@ body {
   margin-right: 20px;
 }
 .sideBar ul.altKat, .sideBar ul.altArsiv {
-  display: none;
+  height: 0;
+  overflow: hidden;
+  transition: 250ms;
 }
 .sideBar ul.altKat li, .sideBar ul.altArsiv li {
   padding-left: 25px;
