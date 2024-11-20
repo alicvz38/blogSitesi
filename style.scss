@@ -327,6 +327,7 @@ body {
         width: 75%;
         padding: 10px;
 
+
         .btn {
             display: block;
             width: 250px;
@@ -356,6 +357,12 @@ body {
             box-shadow: 0 0 10px #5499c750;
             padding: 10px;
             display: flex;
+
+            &.reklamAlani{
+                color: #888;
+                font-size: 28px;
+                font-weight: 500;
+            }
 
             &:hover {
                 box-shadow: 0 0 10px #5499c7ff;
@@ -571,6 +578,72 @@ body {
 
                 .adet {
                     color: #aaa;
+                }
+            }
+        }
+    }
+}
+
+
+.enCok{
+    width: 100%;
+    flex-direction: column;
+
+    .brand{
+        width: 100%;
+        height: 200px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        margin: 50px auto;
+        text-align: center;
+        background: var(--bg);
+        position: sticky;
+        top: 50px;
+    }
+
+    .brand2{
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+
+        a{
+            color: #555;
+            font-size: 18px;
+            transition: 250ms;
+
+            &.active, &:hover{
+                color: #000;
+                font-weight: 800;
+            }
+        }
+    }
+
+    .yeni{
+        width: 80%;
+        margin: auto;
+
+        .yeniHaber{
+            width: 100%;
+
+            .icerikler{
+                width: 100%;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+
+                .hizala{
+                    gap: 10px;
+                }
+
+                .okuma{
+                    color: #888;
+                    font-weight: 700;
                 }
             }
         }
@@ -897,6 +970,20 @@ footer {
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+    
+            
+    .enCok{
+
+        .yeni{
+
+            .yeniHaber{
+
+                img{
+                    width: 100%;
                 }
             }
         }

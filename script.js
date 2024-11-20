@@ -44,39 +44,39 @@ let kt = document.querySelector(".kt");
 let ktgr = document.querySelector(".altKat");
 let durum = 0;
 let a0 = document.querySelectorAll(".a0");
-let a1 = document.querySelectorAll(".a1");
+// let a1 = document.querySelectorAll(".a1");
 let he0 = a0.length*62;
-let he1 = a1.length*62;
+// let he1 = a1.length*62;
 
-let arsiv = document.querySelector(".arsiv");
-let altArsiv = document.querySelector(".altArsiv");
-let durum2 = 0;
+// let arsiv = document.querySelector(".arsiv");
+// let altArsiv = document.querySelector(".altArsiv");
+// let durum2 = 0;
 
 kt.addEventListener("click",()=>{
     if(durum == 0){
         ktgr.style.height = he0+"px";
-        altArsiv.style.height = "0px";
+        // altArsiv.style.height = "0px";
         durum = 1;
-        durum2 = 0;
+        // durum2 = 0;
     }else{
         ktgr.style.height = "0px";
         durum = 0;
     }
 });
 
-arsiv.addEventListener("click",(e)=>{
-    if(durum2 == 0){
-        altArsiv.style.height = he1+"px";
-        ktgr.style.height = "0px";
-        durum2 = 1;
-        durum = 0;
-    }else{
-        altArsiv.style.height = "0px";
-        durum2 = 0;
-    }
+// arsiv.addEventListener("click",(e)=>{
+//     if(durum2 == 0){
+//         altArsiv.style.height = he1+"px";
+//         ktgr.style.height = "0px";
+//         durum2 = 1;
+//         durum = 0;
+//     }else{
+//         altArsiv.style.height = "0px";
+//         durum2 = 0;
+//     }
 
-    e.preventDefault();
-});
+//     e.preventDefault();
+// });
 
 let azalt = document.querySelector(".azalt");
 let artir = document.querySelector(".artir");

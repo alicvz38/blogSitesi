@@ -302,6 +302,11 @@ body {
   padding: 10px;
   display: flex;
 }
+.haberler .yeni .yeniHaber.reklamAlani {
+  color: #888;
+  font-size: 28px;
+  font-weight: 500;
+}
 .haberler .yeni .yeniHaber:hover {
   box-shadow: 0 0 10px #5499c7;
 }
@@ -474,6 +479,62 @@ body {
 }
 .haberler .enCokHaber .enCk .bilgi .adet {
   color: #aaa;
+}
+
+.enCok {
+  width: 100%;
+  flex-direction: column;
+}
+.enCok .brand {
+  width: 100%;
+  height: 200px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin: 50px auto;
+  text-align: center;
+  background: var(--bg);
+  position: sticky;
+  top: 50px;
+}
+.enCok .brand2 {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.enCok .brand2 a {
+  color: #555;
+  font-size: 18px;
+  transition: 250ms;
+}
+.enCok .brand2 a.active, .enCok .brand2 a:hover {
+  color: #000;
+  font-weight: 800;
+}
+.enCok .yeni {
+  width: 80%;
+  margin: auto;
+}
+.enCok .yeni .yeniHaber {
+  width: 100%;
+}
+.enCok .yeni .yeniHaber .icerikler {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.enCok .yeni .yeniHaber .icerikler .hizala {
+  gap: 10px;
+}
+.enCok .yeni .yeniHaber .icerikler .okuma {
+  color: #888;
+  font-weight: 700;
 }
 
 footer {
@@ -716,5 +777,8 @@ footer {
   }
   .haberler .yeni .yeniHaber .icerikler .hizala .haber:hover {
     color: #5499c7;
+  }
+  .enCok .yeni .yeniHaber img {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
