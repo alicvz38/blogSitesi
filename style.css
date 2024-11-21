@@ -183,12 +183,14 @@ body {
   color: #5499c7;
   margin-right: 20px;
 }
-.sideBar ul.altKat, .sideBar ul.altArsiv {
+.sideBar ul.altKat,
+.sideBar ul.altArsiv {
   height: 0;
   overflow: hidden;
   transition: 250ms;
 }
-.sideBar ul.altKat li, .sideBar ul.altArsiv li {
+.sideBar ul.altKat li,
+.sideBar ul.altArsiv li {
   padding-left: 25px;
 }
 .sideBar ul.sosyal {
@@ -265,6 +267,7 @@ body {
   margin: 25px auto;
   display: flex;
 }
+.haberler h1,
 .haberler h3,
 .haberler h2 {
   color: #5499c7;
@@ -350,6 +353,91 @@ body {
 }
 .haberler .yeni .yeniHaber .icerikler .yazar:hover {
   color: #888;
+}
+.haberler .icerik p {
+  width: 85%;
+  font-size: 18px;
+}
+.haberler .icerik .yazarlar {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 85%;
+}
+.haberler .icerik .yazarlar .y {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  color: #555;
+  font-size: 18px;
+}
+.haberler .icerik .yazarlar .y .yazar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.haberler .icerik .yazarlar .y .yazar .adSoyad, .haberler .icerik .yazarlar .y .yazar .meslek {
+  color: #555;
+  font-weight: 800;
+  transition: 250ms;
+}
+.haberler .icerik .yazarlar .y .yazar .adSoyad:hover, .haberler .icerik .yazarlar .y .yazar .meslek:hover {
+  color: #2682c0;
+}
+.haberler .icerik .yazarlar .y .yazar .social {
+  display: flex;
+  gap: 15px;
+}
+.haberler .icerik .yazarlar .y .yazar .social a {
+  font-size: 24px;
+  color: #5499c7;
+  transition: 250ms;
+}
+.haberler .icerik .yazarlar .y .yazar .social a:hover {
+  text-shadow: 0 0 15px #5499c7, 0 0 15px #5499c7, 0 0 15px #5499c7;
+}
+.haberler .icerik .destekMesajlari {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.haberler .icerik .destekMesajlari input {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+}
+.haberler .icerik .destekMesajlari textarea {
+  width: 100%;
+  min-height: 250px;
+  padding: 15px;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+}
+.haberler .icerik .destekMesajlari button {
+  font-size: 18px;
+  color: #5499c7;
+  border: 1px solid #5499c7;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 250ms;
+  cursor: pointer;
+}
+.haberler .icerik .destekMesajlari button:hover {
+  color: #fff;
+  background: #5499c7;
+  box-shadow: 0 0 10px #2682c0, 0 0 15px #2682c0;
+}
+.haberler .icerik .bilgiler {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+.haberler .icerik .bilgiler p {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
 }
 .haberler .makale .font {
   width: 90%;
@@ -479,6 +567,20 @@ body {
 }
 .haberler .enCokHaber .enCk .bilgi .adet {
   color: #aaa;
+}
+.haberler .enCokHaber.hakkimizda {
+  font-size: 20px;
+}
+.haberler .enCokHaber.hakkimizda li a {
+  display: block;
+  color: #555;
+  transition: 250ms;
+  padding: 15px;
+}
+.haberler .enCokHaber.hakkimizda li a.active, .haberler .enCokHaber.hakkimizda li a:hover {
+  color: #000;
+  background: rgba(84, 153, 199, 0.2666666667);
+  border-left: 3px solid #2682c0;
 }
 
 .enCok {
@@ -714,7 +816,13 @@ footer {
   .haberler .yeni .yeniHaber .icerikler .haber {
     font-size: 16px;
   }
-  .haberler .makale img, .haberler .makale table, .haberler .makale .icerik {
+  .haberler .icerik p, .haberler .icerik .yazarlar, .haberler .icerik .destekMesajlari, .haberler .icerik iframe {
+    width: 100%;
+    padding: 15px;
+  }
+  .haberler .makale img,
+  .haberler .makale table,
+  .haberler .makale .icerik {
     width: 95%;
     margin: auto;
   }

@@ -46,11 +46,11 @@ body {
                     border-bottom: 3px solid #fff;
                 }
 
-                &.ktgr{
+                &.ktgr {
 
-                    &:hover{
+                    &:hover {
 
-                        ul{
+                        ul {
                             top: 50px;
                             visibility: visible;
                             opacity: 1;
@@ -58,7 +58,7 @@ body {
                     }
                 }
 
-                ul{
+                ul {
                     position: absolute;
                     left: 0;
                     top: 100px;
@@ -70,15 +70,15 @@ body {
                     opacity: 0;
                     transition: 250ms;
 
-                    li{
+                    li {
                         height: auto;
                         padding: 10px;
-                        
-                        &:hover{
+
+                        &:hover {
                             background: #6bb4e4;
                         }
 
-                        a{
+                        a {
                             font-size: 16px;
                         }
                     }
@@ -196,7 +196,7 @@ body {
             border-radius: 10px;
             transition: 250ms;
 
-            a{
+            a {
                 display: block;
                 width: 100%;
             }
@@ -219,12 +219,13 @@ body {
         }
     }
 
-    ul.altKat, ul.altArsiv{
+    ul.altKat,
+    ul.altArsiv {
         height: 0;
         overflow: hidden;
         transition: 250ms;
-        
-        li{
+
+        li {
             padding-left: 25px;
         }
     }
@@ -316,6 +317,7 @@ body {
     margin: 25px auto;
     display: flex;
 
+    h1,
     h3,
     h2 {
         color: #5499c7;
@@ -358,7 +360,7 @@ body {
             padding: 10px;
             display: flex;
 
-            &.reklamAlani{
+            &.reklamAlani {
                 color: #888;
                 font-size: 28px;
                 font-weight: 500;
@@ -422,6 +424,110 @@ body {
         }
     }
 
+    .icerik{
+
+        p{
+            width: 85%;
+            font-size: 18px;
+        }
+
+        .yazarlar{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            width: 85%;
+
+            .y{
+                display: flex;
+                gap: 25px;
+                align-items: center;
+                color: #555;
+                font-size: 18px;
+
+                .yazar{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    .adSoyad, .meslek{
+                        color: #555;
+                        font-weight: 800;
+                        transition: 250ms;
+
+                        &:hover{
+                            color: #2682c0;
+                        }
+                    }
+
+                    .social{
+                        display: flex;
+                        gap: 15px;
+
+                        a{
+                            font-size: 24px;
+                            color: #5499c7;
+                            transition: 250ms;
+
+                            &:hover{
+                                text-shadow: 0 0 15px #5499c7, 0 0 15px #5499c7, 0 0 15px #5499c7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .destekMesajlari{
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            input{
+                width: 100%;
+                padding: 15px;
+                font-size: 18px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            textarea{
+                width: 100%;
+                min-height: 250px;
+                padding: 15px;
+                font-size: 18px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            button{
+                font-size: 18px;
+                color: #5499c7;
+                border: 1px solid #5499c7;
+                background: #fff;
+                padding: 15px;
+                border-radius: 10px;
+                transition: 250ms;
+                cursor: pointer;
+
+                &:hover{
+                    color: #fff;
+                    background: #5499c7;
+                    box-shadow: 0 0 10px #2682c0, 0 0 15px #2682c0;
+                }
+            }
+        }
+
+        .bilgiler{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 100px;
+
+            p{
+                border-bottom: 1px solid #ddd;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
     .makale {
 
         .font {
@@ -481,7 +587,7 @@ body {
             width: 90%;
             margin-bottom: 100px;
         }
-        
+
         table table {
             border: 1px solid #dededf;
             height: 100%;
@@ -491,50 +597,50 @@ body {
             border-spacing: 1px;
             text-align: left;
         }
-        
-        table captiontable{
+
+        table captiontable {
             caption-side: top;
             text-align: left;
         }
-        
+
         table th {
             border: 1px solid #dededf;
             background-color: #2682c0;
             color: #fff;
             padding: 5px;
         }
-        
+
         table td {
             border: 1px solid #dededf;
             padding: 5px;
         }
-        
+
         table tr:nth-child(even) td {
             background-color: #dceaf9;
             color: #000000;
         }
-        
+
         table tr:nth-child(odd) td {
             background-color: #d5c7e1;
             color: #000000;
         }
 
-        ol{
+        ol {
 
-            li{
+            li {
                 list-style: decimal;
                 margin-bottom: 10px;
                 font-weight: 600;
             }
         }
 
-        .kaynak{
+        .kaynak {
             background: #5499c750;
             padding: 5px;
             font-size: 18px;
             color: #222;
 
-            a{
+            a {
                 margin-left: 25px;
                 color: #555;
             }
@@ -581,15 +687,35 @@ body {
                 }
             }
         }
+
+        &.hakkimizda{
+            font-size: 20px;
+
+            li{
+
+                a{
+                    display: block;
+                    color: #555;
+                    transition: 250ms;
+                    padding: 15px;
+
+                    &.active, &:hover{
+                        color: #000;
+                        background: #5499c744;
+                        border-left: 3px solid #2682c0;
+                    }
+                }
+            }
+        }
     }
 }
 
 
-.enCok{
+.enCok {
     width: 100%;
     flex-direction: column;
 
-    .brand{
+    .brand {
         width: 100%;
         height: 200px;
         color: #fff;
@@ -602,7 +728,7 @@ body {
         background: var(--bg);
     }
 
-    .brand2{
+    .brand2 {
         margin-bottom: 25px;
         display: flex;
         align-items: center;
@@ -610,36 +736,37 @@ body {
         flex-wrap: wrap;
         gap: 25px;
 
-        a{
+        a {
             color: #555;
             font-size: 18px;
             transition: 250ms;
 
-            &.active, &:hover{
+            &.active,
+            &:hover {
                 color: #000;
                 font-weight: 800;
             }
         }
     }
 
-    .yeni{
+    .yeni {
         width: 80%;
         margin: auto;
 
-        .yeniHaber{
+        .yeniHaber {
             width: 100%;
 
-            .icerikler{
+            .icerikler {
                 width: 100%;
                 padding: 10px;
                 display: flex;
                 flex-direction: column;
 
-                .hizala{
+                .hizala {
                     gap: 10px;
                 }
 
-                .okuma{
+                .okuma {
                     color: #888;
                     font-weight: 700;
                 }
@@ -887,8 +1014,19 @@ footer {
             }
         }
 
-        .makale{
-            img, table, .icerik{
+        .icerik{
+
+            p,.yazarlar, .destekMesajlari, iframe{
+                width: 100%;
+                padding: 15px;
+            }
+        }
+
+        .makale {
+
+            img,
+            table,
+            .icerik {
                 width: 95%;
                 margin: auto;
             }
@@ -908,9 +1046,9 @@ footer {
         left: 0;
         width: 100%;
 
-        .left{
+        .left {
 
-            .logo{
+            .logo {
                 margin-left: -15px;
             }
         }
@@ -972,15 +1110,15 @@ footer {
             }
         }
     }
-    
-            
-    .enCok{
 
-        .yeni{
 
-            .yeniHaber{
+    .enCok {
 
-                img{
+        .yeni {
+
+            .yeniHaber {
+
+                img {
                     width: 100%;
                 }
             }
